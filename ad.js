@@ -18,8 +18,9 @@ setInterval(() => {
 		.enterIFrame('iframe[src="https://feed.adrelayer.com/widget?widget_id=SJzbJQrtYm4vBIiejvrG&block_view_ident=SJzbJQrtYm4vBIiejvrG1"]')
 		.evaluate(() => {
 			document.querySelector("a[title='topadvert.ru']").remove();
+			document.querySelector("a[target='_blank']").removeAttribute("target");
 		})
-		.click("a[target='_blank']")
+		.click("a")
 		.wait(3000)
 		.evaluate(() => {
 	                return document
